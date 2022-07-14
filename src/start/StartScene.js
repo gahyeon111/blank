@@ -13,8 +13,8 @@ const textProps = {
   font: 'https://fonts.gstatic.com/s/kanit/v7/nKKU-Go6G5tXcr4WPBWnVac.woff'
 }
 
-const BG_COLOR = '#921212'
-const PEDRO_COLOR = "#aaa"
+const BG_COLOR = '#8C031C'//'#921212'
+const PEDRO_COLOR = '#aaa'
 const CLICKHERE_COLOR = "#f70131"
 const REFLECTION_SIDE_COLOR = "#929292"
 const DARK_SIDE_COLOR = "#921212"
@@ -95,7 +95,7 @@ function Mirrors({ envMap }) {
   const mirrorsData = useMemo(
     () =>
       new Array(ROWS * COLS).fill().map((_, index) => ({
-        mass: 1,
+        mass: 0.5,
         material: { friction: 1, restitution: 0 },
         args: [BOX_SIZE, BOX_SIZE, BOX_SIZE],
         position: [
@@ -151,12 +151,15 @@ export default function Scene() {
           args={[0.1, 100, renderTarget]}
         />
 
-        <Title name="title" label="BLANK" position={[0, 2, -10]} color={PEDRO_COLOR} />
-        <TitleCopies position={[0, 2, -5]} rotation={[0, 0, 0]} layers={[11]} label="BLANK"  color={PEDRO_COLOR} />
+        <Title name="title" label="BLANK" position={[0, 5, -10]} color={PEDRO_COLOR} />
+        <Title name="title" label="BLANK" position={[0.1, 5.1, -10.5]} color='#fff' />
+        <TitleCopies position={[0, 2, -5]} rotation={[0, 0, 0]} layers={[11]} label="BLANK" color={PEDRO_COLOR} />
+        {/* <TitleCopies position={[0, 2, -5]} rotation={[0, 0, 0]} layers={[11]} label="BLANK" color='#fff' /> */}
+
 
         <Title layers={[11]} name="title" label="DO YOU WANT TO START?" position={[0, 2, 24]} scale={[-1, 1, 1]} color={CLICKHERE_COLOR} />
 
-        <Physics gravity={[0, -10, 0]}>
+        <Physics gravity={[(Math.random() * (2)) -1, -10, 0]}>
           <Mirrors envMap={renderTarget.texture} />
           <PhysicalWalls rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]} />
           <PhysicalTitle args={[13, 2.5, 0.1]} position={[0, 2.25, -10]} />
