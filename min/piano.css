@@ -1,0 +1,486 @@
+/**
+  Copyright 2012 Michael Morris-Pearce
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+audio {
+  display: none;
+}
+
+.piano-javascript {
+  border: 3px solid rgb(93, 56, 180);
+  display: block;
+}
+
+/* 전체 피아노 크기 width */
+.piano {
+  padding: 5px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+}
+
+.piano-container,
+.piano-javascript {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.piano-container {
+  text-align: center;
+  /* width: 100%;
+  height: 100%;
+  position: absolute; */
+}
+
+.piano-keys {
+  word-spacing: 0;
+  letter-spacing: 0;
+  font-size: 0;
+  /* width: 100%;
+  height: 100%;
+  position: absolute; */
+}
+
+.piano-pedal {
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.piano-sustain {
+  color: rgb(0, 0, 0);
+}
+
+.piano-white,
+.piano-black {
+  display: inline-block;
+  /* position: relative;
+  vertical-align: top;
+  direction: ltr;
+  margin: 0;
+  padding: 0; */
+}
+
+.piano-white,
+.piano-black-raised {
+  /* 피아노 테두리 색 */
+  border-radius: 2px;
+  border-color: rgba(0, 0, 0, 0.699);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  cursor: pointer;
+}
+
+/* 흰색 피아노 key 크기 */
+.piano-white {
+  /* width: 48px;
+  height: 200px; */
+  width: 65px;
+  height: 65px;
+  background-color: rgb(196, 186, 204);
+  z-index: 1;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  color: rgba(128, 30, 30, 0);
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 50%;
+  border-color: rgba(233, 210, 255, 0.158);
+  border-width:35px;
+  background-clip: padding-box;
+  box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  
+  /* position: fixed;
+  top: 100;
+  left: 100; */
+}
+/* .piano-white:hover {
+  background-color: #ff0081;
+  
+} */
+.C4:hover, .D4:hover, .E4:hover, .F4:hover, .G4:hover, .A4:hover, .Db5:hover {
+  box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
+}
+.C4, .D4, .E4, .F4, .G4, .A4, .Db5 {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  
+}
+.A2 {
+  position: fixed;
+  top: 260px;
+  left: 190px;
+}
+.Bb2 {
+  position: fixed;
+  top: 420px;
+  left: 730px;
+}
+.B2 {
+  position: fixed;
+  top: 530px;
+  left: 1010px;
+}
+.C3 {
+  position: fixed;
+  top: 740px;
+  left: 300px;
+}
+.Db3 {
+  position: fixed;
+  top: 370px;
+  left: 1400px;
+}
+.D3 {
+  position: fixed;
+  top: 440px;
+  left: 1170px;
+}
+.Eb3 {
+  position: fixed;
+  top: 90px;
+  left: 350px;
+}
+.E3 {
+  position: fixed;
+  top: 730px;
+  left: 1680px;
+}
+.F3 {
+  position: fixed;
+  top: 180px;
+  left: 540px;
+}
+.Gb3 {
+  position: fixed;
+  top: 510px;
+  left: 830px;
+}
+.G3 {
+  position: fixed;
+  top: 500px;
+  left: 530px;
+}
+.Ab3 {
+  position: fixed;
+  top: 430px;
+  left: 320px;
+}
+.A3 {
+  position: fixed;
+  top: 540px;
+  left: 1510px;
+}
+.Bb3 {
+  position: fixed;
+  top: 200px;
+  left: 1530px;
+}
+.B3 {
+  position: fixed;
+  top: 150px;
+  left: 750px;
+}
+.C4 {
+  position: fixed;
+  top: 410px;
+  left: 920px;
+  border-radius: 50%;
+}
+.Db4 {
+  position: fixed;
+  top: 740px;
+  left: 1250px;
+}
+.D4 {
+  position: fixed;
+  top: 800px;
+  left: 1500px;
+  border-radius: 50%;
+}
+.Eb4 {
+  position: fixed;
+  top: 580px;
+  left: 170px;
+}
+.E4 {
+  position: fixed;
+  top: 350px;
+  left: 570px;
+  border-radius: 50%;
+}
+.F4 {
+  position: fixed;
+  top: 230px;
+  left: 400px;
+  border-radius: 50%;
+}
+.Gb4 {
+  position: fixed;
+  top: 130px;
+  left: 1130px;
+}
+.G4 {
+  position: fixed;
+  top: 720px;
+  left: 1070px;
+  border-radius: 50%;
+}
+.Ab4 {
+  position: fixed;
+  top: 730px;
+  left: 750px;
+}
+.A4 {
+  position: fixed;
+  top: 400px;
+  left: 50px;
+  border-radius: 50%;
+}
+.Bb4 {
+  position: fixed;
+  top: 180px;
+  left: 980px;
+}
+.B4 {
+  position: fixed;
+  top: 710px;
+  left: 480px;
+}
+.C5 {
+  position: fixed;
+  top: 50px;
+  left: 1340px;
+}
+.Db5 {
+  position: fixed;
+  top: 330px;
+  left: 1700px;
+}
+.piano-black {
+  width: 0px;
+  height: 100px;
+  z-index: 2;
+  position: fixed;
+  top: 100;
+  right: 100;
+}
+
+
+/* 검은색 피아노 key 크기 */
+.piano-black-raised {
+  width: 32px;
+  height: 100px;
+  /* position: relative;
+  left: -10px; */
+  background-color: rgb(20, 29, 44);
+  /* rgb(99, 64, 102); */
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.piano-black-button {
+  border-radius: 50%;
+}
+
+#mooon {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+#moon {
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 18.75px 18.75px 0 0 rgba(255, 240, 106, 0.247);
+}
+
+#lockk {
+  position: fixed;
+  top: 200px;
+  left: 100px;
+  width: 70px;
+  height: 70px;
+  background-color: #e6007300;
+}
+
+#lock {
+  font-size: 12px;
+  position: absolute;
+  width: 54px;
+  height: 39px;
+  border-radius: 6px;
+  top: 30px;
+  box-sizing: border-box;
+  border: 10.5px solid rgb(91, 58, 75);
+  border-right-width: 22.5px;
+  border-left-width: 22.5px;
+  margin: 0 0 18rpx 0;
+}
+#lock:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: 7.5px solid rgb(91, 58, 75);
+  width: 42px;
+  height: 36px;
+  left: 50%;
+  margin-left: -21px;
+  top: -36px;
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+}
+#lock:after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: 3px solid rgb(91, 58, 75);
+  width: 15px;
+  height: 24px;
+  border-radius: 7.5px;
+  left: 50%;
+  top: -3px;
+  margin-left: -7.5px;
+}
+
+/* click effect */
+.middle{
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  text-align: center;
+  /* transform: translate(-50%,-50%); */
+}
+
+
+.confetti-button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  color: rgb(140, 0, 255);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 255, 255, 0.5);
+}
+.confetti-button:focus { outline: 0; }
+
+.confetti-button:before, .confetti-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.confetti-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%),
+   radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%),
+   radial-gradient(circle, #ff0081 20%, transparent 20%), 
+   radial-gradient(circle, #ff0081 20%, transparent 20%), 
+   radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), 
+   radial-gradient(circle, #ff0081 20%, transparent 20%), 
+   radial-gradient(circle, #ff0081 20%, transparent 20%),
+   radial-gradient(circle, #ff0081 20%, transparent 20%),
+   radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+   10% 10%, 18% 18%;
+}
+ .confetti-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%),
+   radial-gradient(circle, #ff0081 20%, transparent 20%), 
+   radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), 
+   radial-gradient(circle, #ff0081 20%, transparent 20%),
+   radial-gradient(circle, #ff0081 20%, transparent 20%),
+   radial-gradient(circle, #ff0081 20%, transparent 20%),
+   radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.confetti-button:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+.confetti-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.confetti-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+ @keyframes
+topBubbles {  0% {
+ background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 
+ 55% 90%, 70% 90%;
+}
+ 50% {
+ background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 
+ 65% 20%, 90% 30%;
+}
+ 100% {
+ background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%,
+  65% 10%, 90% 20%;
+ background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+}
+}
+@keyframes
+bottomBubbles {  0% {
+ background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+}
+ 50% {
+ background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+}
+ 100% {
+ background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+ background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+}
+}

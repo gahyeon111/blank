@@ -1,0 +1,5 @@
+{
+    "scripts": {
+    "start": "npx http-server ./public -c-1 -p 8001 -a localhost"
+  }
+}
