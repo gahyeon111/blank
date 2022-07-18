@@ -13,11 +13,12 @@ const textProps = {
   font: 'https://fonts.gstatic.com/s/kanit/v7/nKKU-Go6G5tXcr4WPBWnVac.woff'
 }
 
-const BG_COLOR = '#921212'
+const BG_COLOR = '#032859'
 const PEDRO_COLOR = "#aaa"
-const CLICKHERE_COLOR = "#f70131"
+const CLICKHERE_COLOR = "#aaa"
 const REFLECTION_SIDE_COLOR = "#929292"
-const DARK_SIDE_COLOR = "#921212"
+const DARK_SIDE_COLOR = "#011126"
+const EASTER_EGG_COLOR = "#8C031C"
 
 function Title({ layers, label = '', color = 0xffffff, ...props }) {
   const group = useRef()
@@ -79,7 +80,7 @@ function Mirror({ sideMaterial, reflectionMaterial, ...props }) {
       onClick={() => api.applyImpulse([0, 0, -50], [0, 0, 0])}
       receiveShadow
       castShadow
-      material={[sideMaterial, sideMaterial, sideMaterial, sideMaterial, reflectionMaterial, sideMaterial]}
+      material={[reflectionMaterial, reflectionMaterial, sideMaterial, reflectionMaterial, reflectionMaterial, sideMaterial]}
     />
   )
 }
@@ -135,26 +136,33 @@ function Background({ layers, ...props }) {
   )
 }
 
+function NextPage(){
+  alert("hi")
+}
+
 export default function Scene() {
   const group = useSlerp()
   const [cubeCamera, renderTarget] = useRenderTarget()
 
+  const newLocal = "title"
+  const newLocal_1 = 11
   return (
     <>
       <group name="sceneContainer" ref={group}>
         <Background layers={[0, 11]} position={[0, 0, -5]} />
         <cubeCamera
-          layers={[11]}
+          layers={[newLocal_1]}
           name="cubeCamera"
           ref={cubeCamera}
           position={[0, 0, 0]}
           args={[0.1, 100, renderTarget]}
         />
 
-        <Title name="title" label="PEDRO" position={[0, 2, -10]} color={PEDRO_COLOR} />
-        <TitleCopies position={[0, 2, -5]} rotation={[0, 0, 0]} layers={[11]} label="PEDRO"  color={PEDRO_COLOR} />
+        <Title name="title" label="BLANK" position={[0, 2, -10]} color={PEDRO_COLOR} />
+        <Title name="title" label="E" position={[5, 10, -10]} color={BG_COLOR } onClick={NextPage} />
+        <TitleCopies label="egg" position={[0, 7, -40]} rotation={[0, 0, 0]} layers={[11]} color={EASTER_EGG_COLOR} />
 
-        <Title layers={[11]} name="title" label="CLICK HERE" position={[0, 2, 24]} scale={[-1, 1, 1]} color={CLICKHERE_COLOR} />
+        <Title layers={[11]} name={newLocal} label="FIND Easter egg" position={[0, 2, 24]} scale={[-1, 1, 1]} color={CLICKHERE_COLOR} />
 
         <Physics gravity={[0, -10, 0]}>
           <Mirrors envMap={renderTarget.texture} />

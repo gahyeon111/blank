@@ -35,6 +35,9 @@ function App(props) {
 }
 
 function Body() {
+  const newLocal = "frame__demo--current"
+  const newLocal_1 = "frame__demo"
+  const newLocal_2 = "/pedro"
   return (
     <Router>
       <main>
@@ -43,11 +46,6 @@ function Body() {
             <h1 className="frame__title">Awesome Mirror Effect</h1>
             <p className="frame__tagline">A react-three-fiber based demo</p>
           </div>
-          <div className="frame__links">
-            <a href="https://tympanus.net/Development/MenuFullGrid/">Previous demo</a>
-            <a href="https://tympanus.net/codrops/?p=51167">Article</a>
-            <a href="https://github.com/emmelleppi/codrops-r3f-mirrors">GitHub</a>
-          </div>
           <div className="frame__demos">
             <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
               PANNA
@@ -55,7 +53,7 @@ function Body() {
             <NavLink to="/olga" activeClassName="frame__demo--current" className="frame__demo">
               OLGA
             </NavLink>
-            <NavLink to="/pedro" activeClassName="frame__demo--current" className="frame__demo">
+            <NavLink to={newLocal_2} activeClassName={newLocal} className={newLocal_1}>
               PEDRO
             </NavLink>
           </div>
