@@ -90,6 +90,13 @@ function TitleCopies({ layers }) {
   )
 }
 
+const clickMe = () => {
+  // document.history.href.back();
+  window.history.back();
+  // console.log(hovered)
+  // document.location.href = 'http://localhost:8000'
+}
+
 function Scene() {
   const [cubeCamera, renderTarget] = useRenderTarget()
   const group = useSlerp()
@@ -109,7 +116,8 @@ function Scene() {
           args={[0.1, 100, renderTarget]}
           position={[0, 0, 5]}
         />
-        <Title name="title" position={[0, 0, -10]} />
+        <Title
+            onClick={() => clickMe()} name="title" position={[0, 0, -10]} />
         <TitleCopies layers={[11]} />
         <Mirrors layers={[0, 11]} envMap={renderTarget.texture} />
       </group>

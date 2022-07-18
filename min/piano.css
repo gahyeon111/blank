@@ -14,6 +14,12 @@
   You should have received a copy of the GNU General Public License
   along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+body{
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+}
 
 audio {
   display: none;
@@ -26,8 +32,8 @@ audio {
 
 /* 전체 피아노 크기 width */
 .piano {
-  padding: 5px;
-  margin: 0 auto;
+  padding: 0px;
+  margin: 0px;
   width: 100%;
   height: 100%;
   /* position: absolute;
@@ -39,8 +45,8 @@ audio {
 .piano-container,
 .piano-javascript {
   border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .piano-container {
@@ -99,12 +105,12 @@ audio {
   text-align: center;
   vertical-align: middle;
   line-height: 70px;
-  color: rgba(128, 30, 30, 0);
+  color: rgb(0, 0, 0);
   font-size: small;
   font-family: 'Courier New', Courier, monospace;
   border-radius: 50%;
   border-color: rgba(233, 210, 255, 0.158);
-  border-width:35px;
+  border-width:33px;
   background-clip: padding-box;
   box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
   
@@ -117,164 +123,223 @@ audio {
   
 } */
 .C4:hover, .D4:hover, .E4:hover, .F4:hover, .G4:hover, .A4:hover, .Db5:hover {
-  box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  box-shadow: 0 0 65px 0 rgba(255, 255, 255, 0.24),0 17px 65px 0 rgba(255, 255, 255, 0.19);
 }
 .C4, .D4, .E4, .F4, .G4, .A4, .Db5 {
   width: 65px;
   height: 65px;
   border-radius: 50%;
+  /* background-color: beige; */
   
 }
 .A2 {
   position: fixed;
-  top: 260px;
-  left: 190px;
+  /* top: 260px;
+  left: 190px; */
+  top: 27%;
+  left: 8%;
 }
 .Bb2 {
   position: fixed;
-  top: 420px;
-  left: 730px;
+  /* top: 420px;
+  left: 730px; */
+  top: 50%;
+  left: 42%;
 }
 .B2 {
   position: fixed;
-  top: 530px;
-  left: 1010px;
+  /* top: 530px;
+  left: 1010px; */
+  top: 55%;
+  left: 59%;
 }
 .C3 {
   position: fixed;
-  top: 740px;
-  left: 300px;
+  /* top: 740px;
+  left: 300px; */
+  top: 16%;
+  left: 43%;
 }
 .Db3 {
   position: fixed;
-  top: 370px;
-  left: 1400px;
+  /* top: 370px;
+  left: 1400px; */
+  top: 47%;
+  left: 81%;
 }
 .D3 {
   position: fixed;
-  top: 440px;
-  left: 1170px;
+  /* top: 440px;
+  left: 1170px; */
+  top: 50%;
+  left: 68%;
 }
 .Eb3 {
   position: fixed;
-  top: 90px;
-  left: 350px;
+  /* top: 90px;
+  left: 350px; */
+  top: 8%;
+  left: 20%;
 }
 .E3 {
   position: fixed;
-  top: 730px;
-  left: 1680px;
+  /* top: 730px;
+  left: 1680px; */
+  top: 89%;
+  left: 94%;
 }
 .F3 {
   position: fixed;
-  top: 180px;
-  left: 540px;
+  /* top: 180px;
+  left: 540px; */
+  top: 58%;
+  left: 50%;
 }
 .Gb3 {
   position: fixed;
-  top: 510px;
-  left: 830px;
+  /* top: 510px;
+  left: 830px; */
+  top: 19%;
+  left: 31%;
 }
 .G3 {
   position: fixed;
-  top: 500px;
-  left: 530px;
+  /* top: 500px;
+  left: 530px; */
+  top : 60%;
+  left: 30%;
 }
 .Ab3 {
   position: fixed;
-  top: 430px;
-  left: 320px;
+  /* top: 430px;
+  left: 320px; */
+  top: 48%;
+  left: 17%;
 }
 .A3 {
   position: fixed;
-  top: 540px;
-  left: 1510px;
+  /* top: 540px;
+  left: 1510px; */
+  top: 70%;
+  left: 87%;
+
 }
 .Bb3 {
   position: fixed;
-  top: 200px;
-  left: 1530px;
+  /* top: 200px;
+  left: 1530px; */
+  top: 23%;
+  left: 90%;
 }
 .B3 {
   position: fixed;
-  top: 150px;
-  left: 750px;
+  /* top: 150px;
+  left: 750px; */
+  top: 87%;
+  left: 16%;
 }
 .C4 {
   position: fixed;
-  top: 410px;
-  left: 920px;
+  /* top: 410px; */
+  /* left: 920px; */
+  top: 49%;
+  left: 53%;
   border-radius: 50%;
 }
 .Db4 {
   position: fixed;
-  top: 740px;
-  left: 1250px;
+  /* top: 740px;
+  left: 1250px; */
+  top: 86%;
+  left: 72%;
 }
 .D4 {
   position: fixed;
-  top: 800px;
-  left: 1500px;
+  /* top: 800px; */
+  /* left: 1500px; */
+  top: 88%;
+  left: 85%;
   border-radius: 50%;
 }
 .Eb4 {
   position: fixed;
-  top: 580px;
-  left: 170px;
+  /* top: 580px;
+  left: 170px; */
+  top : 71%;
+  left: 6%;
 }
 .E4 {
   position: fixed;
-  top: 350px;
-  left: 570px;
+  /* top: 350px; */
+  /* left: 570px; */
+  top: 37%;
+  left: 34%;
   border-radius: 50%;
 }
 .F4 {
   position: fixed;
-  top: 230px;
-  left: 400px;
+  /* top: 230px; */
+  /* left: 400px; */
+  top: 25%;
+  left: 23%;
   border-radius: 50%;
 }
 .Gb4 {
   position: fixed;
-  top: 130px;
-  left: 1130px;
+  /* top: 130px;
+  left: 1130px; */
+  top: 17%;
+  left: 65%;
 }
 .G4 {
   position: fixed;
-  top: 720px;
-  left: 1070px;
+  /* top: 720px; */
+  /* left: 1070px; */
+  top: 85%;
+  left: 65%;
   border-radius: 50%;
 }
 .Ab4 {
   position: fixed;
-  top: 730px;
-  left: 750px;
+  /* top: 730px;
+  left: 750px; */
+  top: 85%;
+  left: 44%;
 }
 .A4 {
   position: fixed;
-  top: 400px;
-  left: 50px;
+  /* top: 400px; */
+  /* left: 50px; */
+  top: 43%;
+  left: 1%;
   border-radius: 50%;
 }
 .Bb4 {
   position: fixed;
-  top: 180px;
-  left: 980px;
+  /* top: 180px;
+  left: 980px; */
+  top: 15%;
+  left: 57%;
 }
 .B4 {
   position: fixed;
-  top: 710px;
-  left: 480px;
+  /* top: 710px;
+  left: 480px; */
+  top: 82%;
+  left: 28%;
 }
 .C5 {
   position: fixed;
-  top: 50px;
-  left: 1340px;
+  /* top: 50px;
+  left: 1340px; */
+  top: 5%;
+  left: 79%;
 }
 .Db5 {
   position: fixed;
   top: 330px;
-  left: 1700px;
+  /* left: 1700px; */
+  left: 94%;
 }
 .piano-black {
   width: 0px;
@@ -308,24 +373,28 @@ audio {
 
 #mooon {
   position: fixed;
-  top: 50px;
-  left: 50px;
+  /* top: 50px;
+  left: 50px; */
+  top: 4%;
+  left: 3%;
   width: 100px;
   height: 100px;
 }
 
 #moon {
 
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   box-shadow: 18.75px 18.75px 0 0 rgba(255, 240, 106, 0.247);
 }
 
 #lockk {
   position: fixed;
-  top: 200px;
-  left: 100px;
+  /* top: 200px;
+  left: 100px; */
+  top: 7%;
+  left: 91%;
   width: 70px;
   height: 70px;
   background-color: #e6007300;

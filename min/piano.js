@@ -137,29 +137,76 @@
         break;
       // 'S'
       case 'A2':
-      case 'C3':
+      case 'B3':
       case 'Eb3':
       case 'G3':
       case 'Ab3':
       case 'Eb4':
       case 'B4':
-        $(pianoClass(key)).animate({
-          'backgroundColor': '#D4F4FA'//"#B2EBF4"
+        $(pianoClass('A2')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
+        }, 0);
+        $(pianoClass('B3')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
+        }, 0);
+        $(pianoClass('Eb3')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
+        }, 0);
+        $(pianoClass('G3')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
+        }, 0);
+        $(pianoClass('Ab3')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
+        }, 0);
+        $(pianoClass('Eb4')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
+        }, 0);
+        $(pianoClass('B4')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
+        }, 0);
+        $(pianoClass('Gb3')).animate({
+          'backgroundColor': '#B2EBF4'//'#D4F4FA'//"#B2EBF4"
         }, 0);
         break;
       // 'T'
       case 'Bb2':
-      case 'B3':
-      case 'Ab4':
-        $(pianoClass(key)).animate({
-          'backgroundColor': '#E4F7BA'//'#CEF279'
+      case 'C3':
+        $(pianoClass('Bb2')).animate({
+          'backgroundColor': '#CEF279'//'#E4F7BA'//'#CEF279'
+        }, 0);
+        $(pianoClass('C3')).animate({
+          'backgroundColor': '#CEF279'//'#E4F7BA'//'#CEF279'
+        }, 0);
+        $(pianoClass('Ab4')).animate({
+          'backgroundColor': '#CEF279'//'#E4F7BA'//'#CEF279'
+        }, 0);
+        $(pianoClass('Gb3')).animate({
+          'backgroundColor': '#CEF279'//'#E4F7BA'//'#CEF279'
+        }, 0);
+        $(pianoClass('Bb4')).animate({
+          'backgroundColor': '#CEF279'//'#E4F7BA'//'#CEF279'
         }, 0);
         break;
       // 'A'
       case 'B2':
-      case 'Gb3':
-        $(pianoClass(key)).animate({
-          'backgroundColor': '#FAECC5'//'#FFC19E'
+      case 'F3':
+        $(pianoClass('B2')).animate({
+          'backgroundColor': '#FFE08C'//'#FAECC5'//'#FFC19E'
+        }, 0);
+        $(pianoClass('F3')).animate({
+          'backgroundColor': '#FFE08C'//'#FAECC5'//'#FFC19E'
+        }, 0);
+        $(pianoClass('Bb4')).animate({
+          'backgroundColor': '#FFE08C'//'#FAECC5'//'#FFC19E'
+        }, 0);
+        $(pianoClass('D3')).animate({
+          'backgroundColor': '#FFE08C'//'#FAECC5'//'#FFC19E'
+        }, 0);
+        $(pianoClass('Db4')).animate({
+          'backgroundColor': '#FFE08C'//'#FAECC5'//'#FFC19E'
+        }, 0);
+        $(pianoClass('Ab4')).animate({
+          'backgroundColor': '#FFE08C'//'#FAECC5'//'#FFC19E'
         }, 0);
         break;
       // 'R'
@@ -169,27 +216,49 @@
       case 'Bb3':
       case 'Gb4':
       case 'C5':
-        $(pianoClass(key)).animate({
-          'backgroundColor': '#FFD8D8'//'#D1B2FF'
+        $(pianoClass('E3')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
+        }, 0);
+        $(pianoClass('Db3')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
+        }, 0);
+        $(pianoClass('A3')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
+        }, 0);
+        $(pianoClass('Bb3')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
+        }, 0);
+        $(pianoClass('Gb4')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
+        }, 0);
+        $(pianoClass('C5')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
+        }, 0);
+        $(pianoClass('D3')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
+        }, 0);
+        $(pianoClass('Db4')).animate({
+          'backgroundColor': '#FFA7A7'//'#FFD8D8'//'#D1B2FF'
         }, 0);
         break;
       // 'S' and 'T'
-      case 'F3':
+      case 'Gb3':
         $(pianoClass(key)).animate({
-          'backgroundColor': '#CEFBC9'//'#B7F0DC'
+          'backgroundColor': '#B7F0B1'//'#CEFBC9'//'#B7F0DC'
         }, 0);
         break;
       // 'T' and 'A'
       case 'Bb4':
+      case 'Ab4':
         $(pianoClass(key)).animate({
-          'backgroundColor': '#FAF4C0'//'#E6E682'
+          'backgroundColor': '#FAED7D'//'#FAF4C0'//'#E6E682'
         }, 0);
         break;
       // 'A' and 'R'
       case 'D3':
       case 'Db4':
         $(pianoClass(key)).animate({
-          'backgroundColor': '#FAE0D4'//'#E6C8C8'
+          'backgroundColor': '#FFC19E'//'#FAE0D4'//'#E6C8C8'
         }, 0);
         break;
       default:
@@ -241,22 +310,25 @@
       if (audio) {
         audio.pause();
       }
-      if (key.length > 2) {
+      
+      // 눌렀다가 다시 돌아오는 색상
+      keys.forEach(function (key) {
         $(pianoClass(key)).animate({
           'backgroundColor': '#c4bacc'
         }, 300, 'easeOutExpo');
-      } else {
-        $(pianoClass(key)).animate({
-          'backgroundColor': '#c4bacc'
-        }, 300, 'easeOutExpo');
-      }
+      })
+      
+
+      // 북두칠성 다 누른 경우
       if (starset.size == 7) {
         // window.alert("You are right!");
         // console.log("정답입니다!!!!!");
         stars(starset);
       }
       else {
-        console.log("오답입니다!!!!");
+        // console.log("오답입니다!!!!");
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
       }
     };
 
@@ -277,10 +349,15 @@
             'backgroundColor': '#FAED7D',
             'color': '#3F0099'
           }, 0);
-        }, i * 1000)
+        }, i * 100)
       })(s);
     }
+    console.log('ljflajsik');
+    // setTimeout(() => {
+    //   document.location.href = 'http://192.168.0.22:8000/';
+    // }, 5000)
 
+    console.log('skjlksfjkla');
   }
 
   /* Simulate a gentle release, as opposed to hard stop. */
@@ -312,17 +389,17 @@
   function startt(e) {
     if (isStart == 0) {
       // window.alert("game start!");
-      keys.forEach(function(key) {
+      keys.forEach(function (key) {
         $(pianoClass(key)).animate({
-          'borderWidth' : 2
+          'borderWidth': 2
         }, 0);
       });
       isStart = 1;
     }
     else {
-      keys.forEach(function(key) {
+      keys.forEach(function (key) {
         $(pianoClass(key)).animate({
-          'borderWidth' : 35
+          'borderWidth': 35
         }, 0);
       });
       isStart = 0;

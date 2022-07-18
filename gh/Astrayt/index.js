@@ -413,7 +413,7 @@ function gameLoop() {
                 } else {
                     if (visit == 0) {
                         visit++;
-                        document.location.href = 'http://localhost:3000/Tutorials/Mirrors#/olga';
+                        document.location.href = 'http://localhost:3001/Tutorials/Mirrors#/mazeaster';
                     } else {
                         scene.remove(eMesh);
                         gameState = "play";
@@ -436,7 +436,7 @@ function gameLoop() {
                 // scene.remove();
                 // renderer.render(scene, camera);
                 // gameState = 'initialize'
-                document.location.replace('http://localhost:52069');
+                document.location.href = 'http://localhost:55365/';
             }
             break;
 

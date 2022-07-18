@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useRef, useEffect } from 'react'
 import * as THREE from 'three'
 import { useFrame } from 'react-three-fiber'
 import { Text, useMatcapTexture, Octahedron, useGLTFLoader } from '@react-three/drei'
@@ -11,16 +11,28 @@ import useLayers from './use-layers'
 
 const TEXT_PROPS = {
   fontSize: 5,
+  // font: 'https://fonts.gstatic.com/s/syncopate/v12/pe0pMIuPIYBCpEV5eFdKvtKqBP5p.woff'
   font: 'https://fonts.gstatic.com/s/monoton/v10/5h1aiZUrOngCibe4TkHLRA.woff'
 }
 
 function Title({ material, texture, map, layers, ...props }) {
+  const group = useRef()
+  useEffect(() => {
+    group.current.lookAt(0, 0, 0)
+  }, [])
+
   const textRef = useLayers(layers)
 
+  // const [hovered, hover] = useState(false)
+
   return (
-    <group {...props}>
-      <Text ref={textRef} name="text-olga" depthTest={false} position={[0, -1, 0]} {...TEXT_PROPS}>
-        OLGA
+    <group {...props} ref={group}
+    >
+      <Text
+        // onPointerOver={(event) => { hover(true); console.log(hovered) }}
+        // onPointerOut={(event) => { hover(false); console.log(hovered) }}
+        ref={textRef} name="text-olga" depthTest={false} position={[0, -1, 0]} {...TEXT_PROPS}>
+        HELLO
         <meshPhysicalMaterial envMap={texture} map={map} roughness={0} metalness={1} color="#FFFFFF" />
       </Text>
     </group>
@@ -67,7 +79,8 @@ function Diamonds({ layers, ...props }) {
 
 function Background({ layers, ...props }) {
   const ref = useLayers(layers)
-  const [matcapTexture] = useMatcapTexture('BA5DBA_F2BEF2_E69BE6_DC8CDC')
+  // const [matcapTexture] = useMatcapTexture('BA5DBA_F2BEF2_E69BE6_DC8CDC')
+  const [matcapTexture] = useMatcapTexture('BAADA8_ECE6E7_9A8378_E3DCD3')
 
   return (
     <Octahedron ref={ref} name="background" args={[20, 4, 4]} {...props}>
@@ -76,27 +89,71 @@ function Background({ layers, ...props }) {
   )
 }
 
+const clickMe = () => {
+  // document.history.href.back();
+  window.history.back();
+  // console.log(hovered)
+  // document.location.href = 'http://localhost:8000'
+}
+
+
 function Scene() {
   const [cubeCamera, renderTarget] = useRenderTarget()
   const thinFilmFresnelMap = useMemo(() => new ThinFilmFresnelMap(410, 0, 5, 1024), [])
   const group = useSlerp()
+
+  // const ref = useRef()
+  const [state, setState] = useState(false)
+  // this.state.hovered = false
+
+  // useFrame((state, delta) => (ref.current.rotation.x += 0.01))
+
   return (
-    <>
-      <Background layers={[0, 11]} position={[0, 0, -5]} />
-      <cubeCamera
-        layers={[11]}
-        name="cubeCamera"
-        ref={cubeCamera}
-        args={[0.1, 100, renderTarget]}
-        position={[0, 0, -12]}
-      />
-      <group name="sceneContainer" ref={group}>
-        <Diamonds layers={[0, 11]} />
-        <group name="text" position={[0, 0, -5]}>
-          <Title layers={[0]} name="title" texture={renderTarget.texture} map={thinFilmFresnelMap} />
+    state
+      ? <>
+        <Background layers={[0, 11]} position={[0, 0, -5]} />
+        <cubeCamera
+          layers={[11]}
+          name="cubeCamera"
+          ref={cubeCamera}
+          args={[0.1, 100, renderTarget]}
+          position={[0, 0, -12]}
+        />
+        <group name="sceneContainer" ref={group}>
+          <Diamonds layers={[0, 11]} />
+          <group name="text" position={[0, 0, -5]}
+          // onPointerOver={(event) => { setState(true); console.log(state) }}
+          >
+            <Title
+              onPointerOut={(event) => { setState(false); console.log(state) }}
+              onClick={() => clickMe()}
+              layers={[0]} name="title" texture={renderTarget.texture}
+              map={thinFilmFresnelMap} />
+          </group>
         </group>
-      </group>
-    </>
+      </>
+      : <>
+        <Background layers={[0, 11]} position={[0, 0, -5]} />
+        <cubeCamera
+          layers={[11]}
+          name="cubeCamera"
+          ref={cubeCamera}
+          args={[0.1, 100, renderTarget]}
+          position={[0, 0, -12]}
+        />
+        <group name="sceneContainer" ref={group}>
+          <Diamonds layers={[0, 11]} />
+          <group name="text" position={[0, 0, -5]}
+          >
+            <Title
+              onPointerOver={(event) => { setState(true); console.log(state) }}
+              // onPointerOut={(event) => { setState(false); console.log(state) }}
+              // onClick={() => clickMe()}
+              layers={[0]} name="title" texture={renderTarget.texture}
+              map={null} />
+          </group>
+        </group>
+      </>
   )
 }
 

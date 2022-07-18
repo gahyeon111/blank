@@ -137,7 +137,8 @@ function Background({ layers, ...props }) {
 }
 
 function NextPage(){
-  alert("hi")
+  // alert("hi")
+  document.location.href = 'http://localhost:8001/';
 }
 
 export default function Scene() {

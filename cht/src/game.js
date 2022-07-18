@@ -88,9 +88,11 @@ class Game {
         this.stage.remove(lastBlock.mesh);
         //console.log(this.blocks.length);
         //block.length+2를 적어야함
-        if (this.blocks.length == 3) {
-          console.log('hi');
-        };
+        if (this.blocks.length == 9) {
+          document.location.href = 'http://localhost:3001/Tutorials/Mirrors#/stackeaster';
+        } else if (this.blocks.length >= 22) {
+          document.location.href = 'http://localhost:3000/';
+        }
         this.setState(this.STATES.ENDED);
         this.music.pause();
         return;

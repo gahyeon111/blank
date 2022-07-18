@@ -42,31 +42,31 @@ function Body() {
     <Router>
       <main>
         <div className="frame">
-          <div className="frame__title-wrap">
+          {/* <div className="frame__title-wrap">
             <h1 className="frame__title">Awesome Mirror Effect</h1>
             <p className="frame__tagline">A react-three-fiber based demo</p>
-          </div>
+          </div> */}
           <div className="frame__demos">
-            <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
+            {/* <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
               PANNA
             </NavLink>
             <NavLink to="/olga" activeClassName="frame__demo--current" className="frame__demo">
               OLGA
-            </NavLink>
-            <NavLink to={newLocal_2} activeClassName={newLocal} className={newLocal_1}>
+            </NavLink> */}
+            {/* <NavLink to={newLocal_2} activeClassName={newLocal} className={newLocal_1}>
               PEDRO
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Redirect to="/panna" />
+              <Redirect to="/pedro" />
             </Route>
-            <Route exact path="/panna">
+            <Route exact path="/stackeaster">
               <App scene={1} />
             </Route>
-            <Route exact path="/olga">
+            <Route exact path="/mazeaster">
               <App scene={2} />
             </Route>
             <Route exact path="/pedro">
