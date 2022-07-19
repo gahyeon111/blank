@@ -73,7 +73,7 @@ Gahyeon Lee
 
 ## Game 2 : Stacking
 
-### Main Color : Green
+### Main Color : Red
 
 > 특정한 행동을 하면 Easter Egg를 얻을 수 있고
 > 다른 특정한 행동을 하면 다음 게임으로 넘어갈 수 있다.
@@ -84,7 +84,7 @@ Gahyeon Lee
 
 ## Game 3 : Maze 
 
-### Main Color : Red
+### Main Color : Green
 
 > 특정한 행동을 하면 Easter Egg를 얻을 수 있고
 > 다른 특정한 행동을 하면 다음 게임으로 넘어갈 수 있다.
