@@ -26,20 +26,19 @@ Gahyeon Lee
 
 
 # About
-방탈출 게임
+다양한 인터랙션과 그래픽을 이용한 웹 방탈출 게임
  
  
  
 
 ## Development Environment
 
-> **React Native (JavaScript, Typescript)**
+> **React, html, css, Javascript, Three.js**
 >
->  * 서버 : Node.js
->  * 데이터베이스 : MongoDB
->  
+>  * 서버 : Node.js, Express
+>
 
-## LOGIN & SIGN UP 
+## Start Page
 
 > 기본 로그인
 > * 아이디와 비밀번호를 모두 입력해야 Login Button을 클릭할 수 있다.
@@ -56,7 +55,7 @@ Gahyeon Lee
 
 
 
-## Tab 1 : Today's PICK
+## Game 1 : Piano
 
 > 네비게이션 탭 중 첫번째인 메인 화면은 오늘의 맛집을 추천해준다.
 > 애니메이션 효과를 주어 다음 화면을 Swipe형식으로 넘길 수 있다.
@@ -66,7 +65,7 @@ Gahyeon Lee
 
 
 
-## Tab 2 : Show My Follwers  
+## Game 2 : Stacking
 
  
 > 내가 FOLLOW한 사람들의 목록을 FlatList로 보여준다.
@@ -75,7 +74,7 @@ Gahyeon Lee
 
 
 
-## Tab 3 : 도장 깨기 List  
+## Game 3 : Maze 
 
 > 도장 깨기 할 맛집을 저장하고 삭제하고 완료버튼을 사용하여 나만의 맛집 도장 깨기에 도전할 수 있다. 
 
@@ -87,7 +86,7 @@ Gahyeon Lee
 
 
 
-## Tab 4 : MY PROFILE Setting
+## Ending Page
 
 > 나의 정보 및 이름/ 비밀번호 변경 
 > 
