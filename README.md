@@ -2,9 +2,6 @@
 **2022년 여름 몰입캠프 3주차 자유과제 프로젝트**
 
 
-
-
-
 #  ♥️ KING BANG ♥️
 
 # Contributors
@@ -103,6 +100,8 @@ Gahyeon Lee
 ## Ending Page
 
 ### Main Color : Black, Gold
+
+![화면 기록 2022-07-19 오후 6 30 51](https://user-images.githubusercontent.com/80222352/179718198-2c085889-5b14-4ee2-8dbf-5a21ecf66a11.GIF)
 
 > 나의 정보 및 이름/ 비밀번호 변경 
 > 
