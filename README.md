@@ -49,11 +49,21 @@ Gahyeon Lee
 
 ## Game 1 : Piano
 
-> 마우스 클릭 혹은 키보드 자판을 이용하여 피아노를 연주할 수 있다.
-> 
-> 
+### Main Color : Purple
 
 ![11](https://user-images.githubusercontent.com/80222352/179715767-83eabec6-095e-473d-ab2c-9d62e84bdde2.GIF)
+
+### Implementation Methods
+> html, css, js를 이용하여 구현
+
+### Major Features
+> 자물쇠 버튼을 클릭하여 피아노 건반을 활성화할 수 있다. 
+> 마우스 클릭 혹은 키보드 자판을 이용하여 피아노를 연주할 수 있다.
+> 피아노 연주시, 해당하는 피아노 건반의 색이 변한다.
+> 게임의 분위기, 피아노 건반의 색, 연주곡 등을 통해 게임에 숨겨진 easter egg와 정답을 찾을 수 있다.
+> 초승달 버튼을 클릭한 후 정답을 입력하면 다음 게임으로 넘어갈 수 있다.
+
+
 
 
 
