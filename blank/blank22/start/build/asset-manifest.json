@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Tutorials/Mirrors/static/css/main.06b04e02.chunk.css",
+    "main.js": "/Tutorials/Mirrors/static/js/main.a4faeb99.chunk.js",
+    "main.js.map": "/Tutorials/Mirrors/static/js/main.a4faeb99.chunk.js.map",
+    "runtime-main.js": "/Tutorials/Mirrors/static/js/runtime-main.c79146e8.js",
+    "runtime-main.js.map": "/Tutorials/Mirrors/static/js/runtime-main.c79146e8.js.map",
+    "static/js/2.4944a6e6.chunk.js": "/Tutorials/Mirrors/static/js/2.4944a6e6.chunk.js",
+    "static/js/2.4944a6e6.chunk.js.map": "/Tutorials/Mirrors/static/js/2.4944a6e6.chunk.js.map",
+    "static/js/3.08284a14.chunk.js": "/Tutorials/Mirrors/static/js/3.08284a14.chunk.js",
+    "static/js/3.08284a14.chunk.js.map": "/Tutorials/Mirrors/static/js/3.08284a14.chunk.js.map",
+    "index.html": "/Tutorials/Mirrors/index.html",
+    "precache-manifest.e1e54e2a55acdc94cb7b3ad71eab2ac5.js": "/Tutorials/Mirrors/precache-manifest.e1e54e2a55acdc94cb7b3ad71eab2ac5.js",
+    "service-worker.js": "/Tutorials/Mirrors/service-worker.js",
+    "static/css/main.06b04e02.chunk.css.map": "/Tutorials/Mirrors/static/css/main.06b04e02.chunk.css.map",
+    "static/js/2.4944a6e6.chunk.js.LICENSE.txt": "/Tutorials/Mirrors/static/js/2.4944a6e6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c79146e8.js",
+    "static/js/2.4944a6e6.chunk.js",
+    "static/css/main.06b04e02.chunk.css",
+    "static/js/main.a4faeb99.chunk.js"
+  ]
+}

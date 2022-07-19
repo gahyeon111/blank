@@ -1,0 +1,80 @@
+.first {
+    border: 1px solid red;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.second {
+    border: 1px solid green;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.third {
+    border: 1px solid blue;
+
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.temp {
+    float: left;
+}
+
+#msg1 {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: fixed;
+    top: 85%;
+    left: 37.5%;
+}
+
+#msg2 {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: fixed;
+    top: 85%;
+    left: 44.5%;
+}
+
+#you {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: fixed;
+    top: 85%;
+    left: 41%;
+    cursor: pointer;
+}
+
+#you:hover {
+    color: darkslateblue;
+}
+
+#easter-egg {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: fixed;
+    top: 85%;
+    left: 53%;
+    cursor: pointer;
+}
+
+#easter-egg:hover {
+    color: goldenrod;
+
+}
+
+#easter-msg {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+}
