@@ -103,7 +103,15 @@ Gahyeon Lee
 
 ![화면 기록 2022-07-19 오후 6 30 51](https://user-images.githubusercontent.com/80222352/179718198-2c085889-5b14-4ee2-8dbf-5a21ecf66a11.GIF)
 
-> 나의 정보 및 이름/ 비밀번호 변경 
+### Implementation Methods
+> html, css, js를 이용하여 구현
+
+### Major Features
+> 게임의 엔딩 화면이다.
 > 
-> Log out / Sign Out 가능  
+> 화면 오른쪽 위의 replay 버튼을 누르면, 게임을 처음부터 다시 시작할 수 있다.
+> 
+> 화면 오른쪽 위의 x 버튼을 누르면 게임을 종료할 수 있다.
+> 
+> Did you find every easter egg? 문장으로부터 Easter Egg를 찾고, 게임의 엔딩을 확인할 수 있다.
 
