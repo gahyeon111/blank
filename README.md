@@ -91,10 +91,6 @@ Gahyeon Lee
 
 <img width="1512" alt="스크린샷 2022-07-19 오후 6 14 29" src="https://user-images.githubusercontent.com/80222352/179714254-69cb0fae-cc28-420f-992a-d03c1c0d2b5f.png">
 
-- 추가 버튼을 누르면 목록이 추가된다.
-- x 버튼을 누르면 삭제 된다.
-- 완료 버튼을 누르면 목록이 추가된다.
-
 
 
 ## Ending Page
